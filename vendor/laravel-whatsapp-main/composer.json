@@ -1,0 +1,75 @@
+{
+    "name": "sawirricardo/laravel-whatsapp",
+    "description": "Enhance your laravel apps with WhatsApp's Cloud API",
+    "keywords": [
+        "sawirricardo",
+        "laravel",
+        "laravel-whatsapp"
+    ],
+    "homepage": "https://github.com/sawirricardo/laravel-whatsapp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sawirricardo",
+            "email": "sawir.ricardo@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3 | ^8.0 | ^8.1",
+        "illuminate/contracts": "^7.0 | ^8.0 | ^9.0 | ^10.0",
+        "sawirricardo/whatsapp-php": "^0.0.3",
+        "spatie/laravel-package-tools": "^1.7 | ^1.8.0 | ^1.9.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.8",
+        "nunomaduro/collision": "^5.0 | ^6.0",
+        "nunomaduro/larastan": "^1.0 | ^2.0.1",
+        "orchestra/testbench": "^6.0 | ^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "spatie/laravel-ray": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sawirricardo\\Whatsapp\\Laravel\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sawirricardo\\Whatsapp\\Laravel\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sawirricardo\\Whatsapp\\Laravel\\WhatsappServiceProvider"
+            ],
+            "aliases": {
+                "Whatsapp": "Sawirricardo\\Whatsapp\\Laravel\\Facades\\Whatsapp"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,35 @@
+{
+    "description": 	"This repository contains Aspose Cloud SDK for PHP source code. Aspose Cloud SDK for PHP lets PHP developers convert and process a variety of file formats in the cloud quickly and easily.",
+    "name": 		"aspose-slides-cloud/php-sdk",
+    "type": 		"library",
+    "keywords" : 	["aspose", "php", "aspose cloud"],
+    "license": 		"MIT",
+    "homepage": "https://github.com/aspose-slides-cloud/aspose-slides-cloud-php",
+    "config": {
+        "platform": {
+            "php": "7.2.5"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.4",
+        "monolog/monolog": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aspose\\Slides\\Cloud\\Sdk\\": "sdk/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Model\\": "sdk/model/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Api\\": "sdk/api/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Tests\\": "tests/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Tests\\Api\\": "tests/api/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Tests\\UseCases\\": "tests/usecases/",
+            "Aspose\\Slides\\Cloud\\Sdk\\Tests\\Utils\\": "tests/utils/"
+        }
+    }
+}
